@@ -3,8 +3,9 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 @app.route("/", methods=['GET','POST'])
+@app.route("/index", methods=['GET','POST'])
 def home():
-    return render_template('nav.html')
+    return render_template('index.html')
 
 @app.route("/ex", methods=['GET','POST'])
 def example():
